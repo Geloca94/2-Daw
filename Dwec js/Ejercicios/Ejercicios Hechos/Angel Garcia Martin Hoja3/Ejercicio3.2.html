@@ -1,0 +1,41 @@
+<html>
+<!--
+
+2.	Usando el array completo de los días de la semana, 
+dividirlo ahora en dos partes: laborables y festivos, 
+siendo laborables y festivos dos nuevos arrays. 
+Para ello emplearemos el método splice().
+
+
+-->
+
+<head>
+    <title>Ejercicio 3.2</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var dia = new Array(7);
+        dia[0] = "Domingo";
+        dia[1] = "Lunes";
+        dia[2] = "Martes";
+        dia[3] = "Miercoles";
+        dia[4] = "Jueves";
+        dia[5] = "Viernes";
+        dia[6] = "Sabado";
+
+        //Creo 2 array nuevos 
+        var laborables = new Array();
+        var festivos = new Array();
+
+        //El splice elimina del array original y me deja uno de 1 al 5
+        //Los parametros de splice 0 equivale al indice , y el 2 equivale a cuantos elementos quieres coger en este caso 2
+        laborables = dia.splice(1, 5);
+        festivos = dia.splice(0, 2);
+
+        document.write(laborables, "<br>");
+        document.write(festivos);
+    </script>
+</body>
+
+</html>

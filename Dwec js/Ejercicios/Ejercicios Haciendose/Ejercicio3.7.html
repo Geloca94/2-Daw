@@ -1,0 +1,81 @@
+<html>
+<!--
+ 7.	Implementar en Javascript, una función booleana que recibiendo como argumento 
+ un número de tarjeta de crédito (16 dígitos),
+  permita comprobar si es un número de tarjeta valido o no lo es. Para ello, ha de emplearse el siguiente método, por pasos:
+ 
+a)	Leemos  el  número de tarjeta de crédito del cual queramos verificar y tomamos  los números de las posiciones impares.
+b)	Multiplicamos cada uno de los números de las posiciones impares por 2.  Si el resultado  es mayor que nueve, le restamos nueve.
+c)	Ahora sumamos todos los números anteriores  con los números de la tarjeta de las posiciones pares.
+d)	Con todo ello, obtenemos una nueva cifra. Si esta cifra es múltiplo de 10, entonces el número de la tarjeta es válido,
+ caso contrario, es invalida.
+La función de comprobación retornará true o false según el caso. Además deberá comprobarse previamente 
+al algoritmo que se introducen exactamente 16 caracteres numéricos.
+-->
+
+<head>
+    <title>Ejercicio 3.7</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var numeroTarjeta = prompt("Dame el numero de tarjeta");
+
+        function comrpobarTarjeta(numeroTajeta) {
+
+            var numerosImpares = new Array();
+            var suma = 0;
+            //Cojo el numero de la tarjeta y la leo caracter a caracter 
+            for (i = 0; i < numeroTarjeta.length; i++) {
+
+                //Cojo la Posicion impar las multiplico x2 y si es mayor que 9 le resto  9 y la voy sumando
+                if (i % 2 != 0) {
+
+                    n = numeroTarjeta[i];
+                    n = n * 2;
+                    if (n > 9) {
+
+                        n = n - 9;
+
+
+                    }
+
+                    suma += n;
+
+                    numerosImpares.push(n);
+
+                }
+            }
+
+            //Cojo las posiciones Pares y se lo sumo a lo que tenia
+            for (i = 0; i < numeroTarjeta.length; i++) {
+                if (i % 2 == 0) {
+
+                    suma += numerosImpares[i];
+
+                }
+
+
+            }
+
+
+
+            if (suma % 10 == 0) {
+
+
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        if (comrpobarTarjeta(numeroTarjeta)) {
+
+            document.write("La Tarjeta es valida");
+        } else {
+            document.write("La Tarjeta no es valida")
+        }
+    </script>
+</body>
+
+</html>

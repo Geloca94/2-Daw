@@ -1,0 +1,39 @@
+<html>
+<!--
+
+4.	Partiendo del array[4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1 ], crear una array  
+con los elementos del array original sin repetir y además ordenados.
+ Considera emplear los métodos pop() (elimina el ultimo elemento del array ) y splice().
+-->
+
+<head>
+    <title>Ejercicio 3.4</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var numeros = [4, 0, 3, 4, 7, 3, 5, 8, 1, 8, 8, 0, 2, 3, 1, 2, 5, 7, 3, 2, 5, 1];
+        var numeros2 = new Array();
+
+        for (var i = 0; i <= numeros.length; i++) {
+
+            //Saco el elemento por el que va la i
+            n = numeros[i];
+
+            //M;iro en el array 2 a ver si esta n usando el indexOf que me devuelve 
+            //el indice de ese numero dentro del array
+            //si no me lo encuentra me devuelve -1
+            if (numeros2.indexOf(n) == -1) {
+
+                //si me da -1 me añade el elemento n
+                numeros2.push(n);
+
+            }
+
+        }
+        numeros2.sort();
+        document.write(numeros2);
+    </script>
+</body>
+
+</html>

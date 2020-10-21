@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consulta tu DNI</title>
+    <script src="dni.js"></script>
+    <script>
+            window.onload = function() {
+            document.getElementById("enviar").onclick = function() {
+                letra(document.getElementById("dni").value);
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>¿¡Qué letra pertenece a su DNI!? ¡¡Escríbelo!!</label>
+    <input type="number" id="dni">
+    <input type="submit" id="enviar" value="¡¡Averígualo!!">
+    <span id="aviso"></span>
+</body>
+</html>

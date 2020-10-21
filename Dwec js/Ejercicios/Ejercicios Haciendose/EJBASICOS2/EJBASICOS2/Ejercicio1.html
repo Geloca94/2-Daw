@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejer 2.1</title>
+    <script>
+        var fecha = new Date();
+        var dias = [
+            "Domingo",
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sabado",
+        ];
+        var meses = [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre",
+        ];
+        var hora = fecha.getHours();
+        var minutos = fecha.getMinutes();
+        document.write(
+            "Hoy es " +
+            dias[fecha.getDay()] +
+            ", " +
+            fecha.getDate() +
+            " de " +
+            meses[fecha.getMonth()] +
+            " de " +
+            fecha.getFullYear() +
+            "<br>"
+        );
+        document.write("Son las " + hora + ":" + minutos);
+    </script>
+</head>
+
+<body></body>
+
+</html>

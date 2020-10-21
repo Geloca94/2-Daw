@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejer 2.3</title>
+    <script>
+        var cadena = prompt("Escribe una cadena de texto: ");
+        var final = cadena.split(" ");
+        var finalmostrar = final;
+        document.write("Frase: " + cadena + "<br>"); //Frase que escribes
+        document.write("Numero de palabras: " + finalmostrar.length + "<br>"); //Palabras que tiene
+        document.write("Primera Palabra: " + finalmostrar[0] + "<br>"); //Primera palabra
+        document.write(
+            "Ultima Palabra: " + finalmostrar[finalmostrar.length - 1] + "<br>"
+        ); //Ultima palabra
+
+        //Palabra colocada al inverso
+        finalmostrar = finalmostrar.reverse();
+
+        for (var i = 0; i <= finalmostrar.length - 1; i++) {
+            document.write(finalmostrar[i] + " ");
+        }
+        document.write("<br>");
+
+        finalmostrar = finalmostrar.sort();
+
+        for (var i = 0; i <= finalmostrar.length - 1; i++) {
+            document.write(finalmostrar[i] + " ");
+        }
+        document.write("<br>");
+
+        finalmostrar = finalmostrar.reverse();
+
+        for (var i = 0; i <= finalmostrar.length - 1; i++) {
+            document.write(finalmostrar[i] + " ");
+        }
+        document.write("<br>");
+
+        //Comprobar si es Palindromo
+
+        var cadComparar = cadena.replace(/ /g, "");
+        var cad = "";
+
+        array = cadComparar.split("");
+        array = array.reverse();
+        cad = array.toString();
+        cad = cad.replace(/,/g, "");
+        cadComparar = cadComparar.toLowerCase();
+        cad = cad.toLowerCase();
+
+        if (cadComparar == cad) {
+            document.write("Es un palindromo");
+        } else document.write("No es un palindromo");
+    </script>
+</head>
+
+<body></body>
+
+</html>

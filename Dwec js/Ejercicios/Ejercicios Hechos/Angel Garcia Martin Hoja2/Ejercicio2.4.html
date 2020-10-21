@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio 4.1</title>
+    <script>
+        do {
+            var dni = prompt("Introduce tu dni");
+            var letra = dni.substr(dni.length - 1);
+            var dato = dni.replace(dni.substr(dni.length - 1), "");
+        } while (
+            ((letra.charCodeAt() < 65 || letra.charCodeAt() > 90) &&
+                (letra.charCodeAt() < 97 || letra.charCodeAt() > 122)) ||
+            dato < 1 ||
+            dato > 99999999
+        );
+
+        letra = letra.toUpperCase();
+        var numero = dato % 23;
+        var letracorrecta = "";
+        switch (numero) {
+            case 0:
+                letracorrecta = "T";
+                break;
+            case 1:
+                letracorrecta = "R";
+                break;
+            case 2:
+                letracorrecta = "W";
+                break;
+            case 3:
+                letracorrecta = "A";
+                break;
+            case 4:
+                letracorrecta = "G";
+                break;
+            case 5:
+                letracorrecta = "M";
+                break;
+            case 6:
+                letracorrecta = "Y";
+                break;
+            case 7:
+                letracorrecta = "F";
+                break;
+            case 8:
+                letracorrecta = "P";
+                break;
+            case 9:
+                letracorrecta = "D";
+                break;
+            case 10:
+                letracorrecta = "X";
+                break;
+            case 11:
+                letracorrecta = "B";
+                break;
+            case 12:
+                letracorrecta = "N";
+                break;
+            case 13:
+                letracorrecta = "J";
+                break;
+            case 14:
+                letracorrecta = "Z";
+                break;
+            case 15:
+                letracorrecta = "S";
+                break;
+            case 16:
+                letracorrecta = "Q";
+                break;
+            case 17:
+                letracorrecta = "V";
+                break;
+            case 18:
+                letracorrecta = "H";
+                break;
+            case 19:
+                letracorrecta = "L";
+                break;
+            case 20:
+                letracorrecta = "C";
+                break;
+            case 21:
+                letracorrecta = "K";
+                break;
+            case 22:
+                letracorrecta = "E";
+                break;
+            default:
+                letracorrecta = "";
+        }
+
+        if (letracorrecta == letra) {
+            alert("El DNI: " + dni + " es correcto");
+        } else alert("El DNI: " + dni + " NO es correcto");
+    </script>
+</head>
+
+<body></body>
+
+</html>

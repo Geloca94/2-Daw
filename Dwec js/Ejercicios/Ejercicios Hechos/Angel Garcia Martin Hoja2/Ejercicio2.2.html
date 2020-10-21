@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Ejercicio 2.1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let fecha_cadena = prompt("Introduce una fecha");
+        let fecha = new Date(fecha_cadena);
+
+        if (fecha = "invalid Date") {
+            window.alert("Formato erroneo");
+        } else {
+            //Formato Oct 12, 2019
+
+            let hoy = new Date();
+            let ms = Moth.abs(fecha - hoy);
+            let dias = parseInt(ms / 86400000);
+
+            window.alert("Han pasado " + dias + " Dias");
+
+        }
+    </script>
+</body>
+
+</html>

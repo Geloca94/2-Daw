@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Ejercicio 2.1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var laborables = new Array(7);
+        laborables[0] = " ";
+        laborables[1] = "Lunes";
+        laborables[2] = "Martes";
+        laborables[3] = "Miercoles";
+        laborables[4] = "Jueves";
+        laborables[5] = "Viernes";
+        laborables[6] = " ";
+
+        function semana(laborables) {
+
+            laborables[0] = "Domingo";
+            laborables[6] = "Sabado";
+
+
+        }
+        semana(laborables);
+        document.write(laborables);
+    </script>
+</body>
+
+</html>

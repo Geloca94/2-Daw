@@ -1,0 +1,32 @@
+<html>
+<!--
+
+5.	Partiendo del array [4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1], 
+identifica las posiciones ocupadas por el valor 3, 
+sin recorrer todo el array,
+-->
+
+<head>
+    <title>Ejercicio 3.5</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var numeros = [4, 0, 3, 4, 7, 3, 5, 8, 1, 8, 8, 0, 2, 3, 1, 2, 5, 7, 3, 2, 5, 1];
+
+        indice = numeros.indexOf(3);
+
+        // Saco la primera posicion donde encontro el 3 con el while sigo mirando e imprimo
+        // Las posiciones donde estan los 3 
+        while (indice != -1) {
+
+            document.write(indice + " ");
+
+            //Le digo que me busque desde la posicion siguiente del numero en adelante hasta que no me encuentre mas
+            indice = numeros.indexOf(3, indice + 1);
+
+        }
+    </script>
+</body>
+
+</html>
