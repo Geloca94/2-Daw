@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+2.	Identifica el numero de palabras la frase “Con cien cañones por banda, 
+viento en popa a toda vela, no corta el mar, sino vuela, un velero bergantín”
+-->
+
+<head>
+
+    <title>Ejercicio 4.2</title>
+
+    <script>
+        var frase = "Con cien cañones por banda, viento en popa a toda vela, no corta el mar, sino vuela, un velero bergantín";
+        document.write("La frase: " + frase);
+
+        frase = frase.replace(/,/g, "");
+        var array = frase.split(" ");
+        var contador = 0;
+        array.forEach(element => {
+            contador++;
+        });
+
+        document.write("<b/> tiene " + contador + " palabras.");
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

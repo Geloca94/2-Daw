@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+9.	Crea un script con una función que extraiga los números de una cadena cualquiera. 
+La idea es recibir un número de tarjeta de crédito y transformar 
+la cadena dejando únicamente los números. 
+Por ejemplo si el usuario introduce 972-089 9887-3 la función retornará 97208998873
+-->
+
+<head>
+
+    <title>Ejercicio 4.9</title>
+
+
+
+
+</head>
+
+<body>
+    <script>
+        var cadena = "a";
+        cadena.charCodeAt
+
+        function extraerNumeros(cadena) {
+
+            array = cadena.split("");
+
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].charCodeAt() < 48 || array[i].charCodeAt() > 57) {
+                    array.splice(i, 1);
+                    i--;
+                }
+            }
+            cadena = array.toString();
+            cadena = cadena.replace(/,/g, "");
+            return cadena;
+
+
+        }
+        document.write(extraerNumeros("123---456 789 aaaa10"));
+    </script>
+</body>
+
+</html>

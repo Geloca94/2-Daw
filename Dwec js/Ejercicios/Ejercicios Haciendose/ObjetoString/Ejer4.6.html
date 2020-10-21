@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+6.	Desarrolla una función Javascript de nombre reversa() 
+que recibiendo por parámetro una cadena de texto devuelva sus caracteres en orden inverso.
+-->
+
+<head>
+
+    <title>Ejercicio 4.6</title>
+
+    <script>
+        function reversa(cadena) {
+            var array = cadena.split("");
+            array.reverse();
+            cadena = array.toString();
+            cadena = cadena.replace(/,/g, "");
+            return cadena;
+        }
+        document.write(reversa("Te lo escribo al reves"));
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

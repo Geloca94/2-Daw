@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+10.	Desarrolla una función Javascript de nombre traductor() 
+que permita pasar una cadena de texto al “Idioma de Robber”, 
+esto es: cada consonante se traslada en la cadena consonante + “o” + consonante 
+y cada vocal se deja intacta. Por ejemplo, “Javascript” se traduciría en “JoJavovasoscocroripoptot”. 
+Una vez implementada la función crea un traductor web con dos cajas de texto 
+y realiza la traducción inmediatamente empleando el evento onchange() de la caja de texto.
+-->
+
+<head>
+
+    <title>Ejercicio 4.10</title>
+
+</head>
+
+<body>
+    <script>
+        function traductor(cadena) {
+            array = cadena.split("");
+            arrayTraducido = [];
+
+            for (var i = 0; i < array.length; i++) {
+
+                if (array[i].charCodeAt(0) != 97 &&
+                    array[i].charCodeAt(0) != 101 &&
+                    array[i].charCodeAt(0) != 105 &&
+                    array[i].charCodeAt(0) != 111 &&
+                    array[i].charCodeAt(0) != 117) {
+
+                    arrayTraducido.push(array[i] + "o" + array[i]);
+
+                } else {
+                    arrayTraducido.push(array[i]);
+                }
+            }
+
+
+            cadena = arrayTraducido.toString();
+            cadena = cadena.replace(/,/g, "");
+            document.getElementById("traducido").value = cadena;
+        }
+    </script>
+    <p>Introduce una cadena: <input type="text" id="cadena" onkeyup="traductor(this.value)"> Traducción: <input type="text" id="traducido"></p>
+</body>
+
+</html>

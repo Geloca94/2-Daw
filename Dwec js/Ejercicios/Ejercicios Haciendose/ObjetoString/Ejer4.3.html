@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+3.	Cuenta ahora el numero de letras de la frase anterior
+-->
+
+<head>
+
+    <title>Ejercicio 4.3</title>
+
+    <script>
+        var frase = "Con cien cañones por banda, viento en popa a toda vela, no corta el mar, sino vuela, un velero bergantín";
+        document.write("La frase: " + frase);
+        frase = frase.replace(/,/g, "");
+        frase = frase.replace(/ /g, "");
+
+        var array = frase.split("");
+        var contador = 0;
+        array.forEach(element => {
+            contador++;
+        });
+        document.write("<b/> Tiene " + contador + " letras");
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

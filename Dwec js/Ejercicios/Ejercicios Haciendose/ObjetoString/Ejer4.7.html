@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+7.	Realizar una función de validación que permita chequear si una cadena de texto podría ser una dirección de email valida. La condición será que contenga una arroba y un punto 7
+ que el punto se encuentre después de la arroba (pero no inmediatamente después).
+-->
+
+<head>
+
+    <title>Ejercicio 4.7</title>
+
+    <script>
+        function validarEmail(email) {
+            var devolver;
+            if (email.indexOf("@") != -1 && email.indexOf(".") != -1 && email.indexOf("@") + 1 < email.indexOf(".")) {
+
+                devolver = "El Correo " + email + " Es valido";
+
+            } else {
+                devolver = "El Correo " + email + " No es valido";
+            }
+            return devolver;
+        }
+        document.write(validarEmail("gelotheboss@gml.com"));
+        document.write("<br>" + validarEmail("correonovalido.com"));
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var frase = "Con cien cañones por banda, viento en popa a toda vela, no corta el mar, sino vuela, un velero bergantín";
+        document.write("La frase: "+ frase);
+        frase = frase.replace(/,/g,"");
+        frase = frase.replace(/ /g,"");
+        
+        var array = frase.split("");
+        var contador=0;
+        array.forEach(element => {
+            contador++;
+        });
+        document.write("<br>Tiene " +contador+" letras");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

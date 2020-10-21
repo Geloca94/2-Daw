@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+5.	Localiza la palabra o palabras de mayor longitud e imprímelas en el navegador.
+-->
+
+<head>
+
+    <title>Ejercicio 4.5</title>
+
+    <script>
+        var frase = "Con cien cañones por banda, viento en popa a toda vela, no corta el mar, sino vuela, un velero bergantín";
+        document.write("La frase: " + frase);
+        frase = frase.replace(/,/g, "");
+        var array = frase.split(" ");
+        var larga = ""
+        array.forEach(element => {
+            if (element.length > larga.length) {
+                larga = element;
+            }
+        });
+        document.write("<br><b/> La palabra mas grande es: " + larga);
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

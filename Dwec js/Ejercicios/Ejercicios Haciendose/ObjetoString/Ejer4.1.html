@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+1.	A partir del array [“lunes”,”martes”,”miercoles”], genera la tres cadenas “Lunes”, “Martes” y “Miercoles” 
+(fíjate en las mayúsculas de las iniciales) e imprímelas en el navegador.s.
+-->
+
+<head>
+
+    <title>Ejercicio 4.1</title>
+
+    <script>
+        var array = ["lunes", "martes", "miercoles"];
+
+        array.forEach(element => {
+            document.write(element.charAt(0).toUpperCase() + element.substr(1) + " ");
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+8.	Construye una función charfrequencia() que recibiendo por parámetro una 
+cadena de texto no devuelva las frecuencias 
+(número de repeticiones) de los caracteres que aparecen en ella.
+-->
+
+<head>
+
+    <title>Ejercicio 4.8</title>
+
+    <script>
+        function frecuencia(cadena) {
+            var array = cadena.split("");
+            var indices = [];
+            var letra = "";
+            var contador = 0;
+            var introducir = "";
+
+            for (var i = 0; i < array.length; i++) {
+                letra = array[i];
+                introducir = array[i];
+
+                for (var j = 0; j < array.length; j++) {
+                    if (letra == array[j]) {
+                        contador++;
+                        array.splice(j, 1);
+                        j--;
+                    }
+
+                    if (j == array.length - 1) {
+                        introducir = introducir + ": " + contador;
+                        contador = 0;
+                        indices.push(introducir);
+                    }
+                }
+
+            }
+            indices.forEach(element => {
+                document.write(element + "<br>");
+            });
+
+        }
+
+        frecuencia("Esternocleidomastoideo");
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
